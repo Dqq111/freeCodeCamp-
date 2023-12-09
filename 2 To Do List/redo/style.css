@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  background: linear-gradient(135deg, #153677, #4e085f);
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+}
+
+.toDo {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 40px;
+  border-radius: 10px;
+}
+
+.toDo h2 {
+  display: flex;
+  align-items: center;
+  color: #002765;
+  margin-bottom: 20px;
+}
+
+.toDo h2 img {
+  width: 40px;
+  margin-left: 10px;
+}
+
+.toDo .row {
+  display: flex;
+  background: rgb(238, 236, 236);
+  padding-left: 10px;
+  justify-content: center;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+
+.toDo .row #input-box {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 16px;
+  /* border-radius: 50px; */
+  font-size: 18px;
+}
+
+.toDo .row button {
+  background: orangered;
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.toDo .list-container {
+  list-style: none;
+}
+
+.toDo .list-container li {
+  margin-bottom: 15px;
+  font-size: 17px;
+  /* background: lightblue; */
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.toDo .list-container li::before {
+  content: "";
+  position: absolute;
+  /* background: yellow; */
+  width: 28px;
+  height: 28px;
+  top: 7.5px;
+  left: 8px;
+  border-radius: 50%;
+  background-image: url(../images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.toDo .list-container li.checked {
+  text-decoration: line-through;
+  color: #555;
+}
+
+.toDo .list-container li.checked::before {
+  background-image: url(../images/checked.png);
+}
+
+.toDo .list-container li span {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  /* text-align: center; */
+  /* line-height: 40px;/ */
+}
+
+.toDo .list-container li span:hover {
+  top: -2px;
+  right: 0;
+  background: lightgray;
+  padding: 10px;
+  border-radius: 50%;
+}
